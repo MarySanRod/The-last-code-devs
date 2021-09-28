@@ -1,0 +1,104 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 1rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+div {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.25rem 0;
+    margin-top:10px;  
+    /* Alinear input dentro de un div */
+    text-align: center; 
+}
+
+div input{
+    position: relative;
+    height: 3rem;
+    width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #efefef;
+}
+
+form {
+    margin: 0 auto;
+    border: 1px solid #666666;
+    border-radius: 10px;
+    width: 500px;
+    background-color: white;
+    align-content: center;
+    margin-top:20px; 
+}
+
+.button1 {
+    /* Cualidades texto */
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 0px #bde6cf;
+    /* Color del texo */
+    color: #000000;
+    /* Eliminar color de fondo */
+    background: transparent;
+    /* Cualidades caja, Grosor del borde, estilo de línea y color */
+    box-sizing: content-box;
+    padding: 0.3em 1em 0.3em 1em !important;
+    border-radius: 0.5rem;
+    box-shadow: 0px 8px 10px #bde6cf inset, 3px 3px 3px #000000;
+    border: 1px inset transparent;
+    margin-top:20px;
+}
+/* Al poner el curso encima (hover) */
+.button1:hover {
+    background-color: #73c998;;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#79cc9c), color-stop(100%,#73c998));
+    color: white;
+}
+
+.button2 {
+    /* Cualidades texto */
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 0px #bdc5e6;
+    /* Color del texo */
+    color: #000000;
+    /* Eliminar color de fondo */
+    background: transparent;
+    /* Cualidades caja, Grosor del borde, estilo de línea y color */
+    box-sizing: content-box;
+    padding: 0.3em 1em 0.3em 1em !important;
+    border-radius: 0.5rem;
+    box-shadow: 0px 8px 10px #bdc5e6 inset, 3px 3px 3px #000000;
+    border: 1px inset transparent;
+    margin-top:20px;
+}
+/* Al poner el curso encima (hover) */
+.button2:hover {
+    background-color: #7395c9;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7898c9), color-stop(100%,#7395c9));
+    color: white;
+}
+
+footer {
+    background-color: #364552 ;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-top:140px;
+}
+
