@@ -1,0 +1,10 @@
+h1{
+    color:aqua;
+}
+#cliente{
+    
+    border-style: solid;
+    border-color: blue;
+    border-width: 1cm;
+    border-radius: 5mm;
+}
