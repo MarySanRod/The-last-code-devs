@@ -7,36 +7,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="StylesGI.css" />
 </head>
+
 <body>
     <header>
         <h1 id="titulo">Ingreso al sistema</h1>
     </header>
-    <div id="Formulario">
-        <form>
+    
+    <form>
+        <div id="IngresoDatos">
             <div>
-                <section id="Usuario">
-                    <h2 id="Usuario">Usuario</h2>
-                    <input type="email" id="Usuario" name="Usuario" placeholder=""/>
-                </section>
-
-                <section id="Contraseña">
-                    <h2 id="Contraseña">Contraseña</h2>
-                    <input type= "password" id="Contraseña" name="Contraseña" placeholder=""/>
-                </section>
-            </div>
-            
-            <div>
-                <input name="Conectar" type="submit" class="button1" value="Conectar" aria-label="">
-                <input name="Registrar" type="submit" class="button2" value="Registrar" aria-label="">
+                <h2 id="Usuario">Usuario</h2>
+                <input type="email" id="Usuario" name="Usuario" placeholder=""/>
             </div>
 
-            <div id="Recuperar">
-                <a href="https://"> ¿Olvidó su usuario?</a>
-                <a href="https://">¿Olvidó su contraseña?</a>
+            <div>
+                <h2 id="Contraseña">Contraseña</h2>
+                <input type= "password" id="Contraseña" name="Contraseña" placeholder=""/>
             </div>
-        </form>
+        </div>
+
+        <div id="IniciarSesión">
+            <input name="Conectar" type="submit" class="button1" value="Iniciar sesión" aria-label="">
+        </div>
+
+        <div id="Recuperar">
+            <br>
+            <a href="https://"> ¿Olvidó su usuario?</a>
+            <a href="https://">¿Olvidó su contraseña?</a>
+        </div>
+        
+        <div class="separador"> </div>
+
+        <div id="Registrar">
+            <input name="Registrar" type="submit" class="button2" value="Registrar" aria-label="">
+        </div>
+
+        <div id="Google">
+            <input name="Google" type="submit" class="button3" value="Registrar con google" aria-label="">
+        </div>
+
+        <div><br></div>
+    </form>
      
-    </div>
+
 
     <footer>
             <p>Cuida tu seguridad digital, te invitamos a cambiar tu contraseña y activar el doble factor de autenticación
