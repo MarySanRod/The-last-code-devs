@@ -1,0 +1,80 @@
+#root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 1rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+form div {
+    position: relative;
+    left: 1rem;
+    width: 1320px;
+    margin: 0 auto;
+    background-color: white;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+label, input{
+    position: relative;
+    left: 1rem;
+}
+
+textarea {
+    margin: 0.2rem 1rem;
+    position: relative;
+    left: 0rem;
+}
+
+table {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#footer{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer {
+    
+    background-color: #222 ;
+    padding: 2rem;
+    color: #fff;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
