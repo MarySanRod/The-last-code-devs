@@ -1,0 +1,11 @@
+import React from 'react'
+
+function Header() {
+    return (
+        <header>
+            <h1 id="titulo">Maestro de Productos</h1>
+        </header>
+    )
+}
+
+export default Header
