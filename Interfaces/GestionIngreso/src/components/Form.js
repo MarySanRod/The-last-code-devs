@@ -3,17 +3,19 @@ import React from 'react'
 function Form() {
     return (
       <form action="" class="form_user" id="form_user">
-
+        <div id="margenform"></div>
+        
         <div id="IngresoDatos">
           <div>
-            <h2 id="Usuario">Usuario</h2>
+            <h2 id="TituloUsuario">Usuario</h2>
             <input type="email" id="Usuario" name="Usuario" placeholder="" />
           </div>
 
           <div>
-            <h2 id="Contraseña">Contraseña</h2>
+            <h2 id="TituloContraseña">Contraseña</h2>
             <input type="password" id="Contraseña" name="Contraseña" placeholder="" />
           </div>
+
         </div>
 
         <div id="IniciarSesión">
@@ -22,16 +24,16 @@ function Form() {
           </button>
         </div>
         
-        <div class="separador">
+        <div id="separador">
           </div>
         
         <div id="Google">
-          <button class="button3" type="button" onclic>
+          <button class="button2" type="button" onclic>
             Continuar con Google
           </button>
         </div>
         
-        <div id="pieform"></div>
+        <div id="margenform"></div>
         
         </form>
     )

@@ -1,39 +1,19 @@
+/* ////////////////////// ENCABEZADO ////////////////////// */
+
 header {
     background-color: #364552;
     color: white;
     padding: 3rem 3rem;
 }
 
-header h1 {
+#titulo {
     font-size: 3rem;
     text-align: center;
 }
 
-div h2 {
-  margin-bottom: 15px;
-}
+/* ////////////////////// FORMULARIO ////////////////////// */
 
-div {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0.25rem 0;
-    margin-top: 10px;  
-    /* Alinear input dentro de un div */
-    text-align: center; 
-}
-
-div input{
-    position: relative;
-    height: 3rem;
-    width: 15rem;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 0.5rem;
-    background-color: #efefef;
-}
-
-form {
+.form_user {
     margin: 0 auto;
     border: 1px solid #666666;
     border-radius: 10px;
@@ -41,7 +21,36 @@ form {
     background-color: white;
     align-content: center;
     margin-top:80px;
-    margin-bottom:153px;
+}
+
+#margenform {
+    margin-top:30px;
+  }
+  
+#IngresoDatos, #IniciarSesión, #Google {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.25rem 0;
+    margin-top: 10px;
+    
+    /* Alinear input dentro de un div */
+    text-align: center; 
+}
+
+#TituloUsuario, #TituloContraseña {
+    margin-bottom: 15px;
+  }
+
+#Usuario, #Contraseña {
+    position: relative;
+    height: 3rem;
+    width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #efefef;
+    margin-bottom: 30px;
 }
 
 .button1 {
@@ -60,7 +69,6 @@ form {
     border-radius: 0.5rem;
     box-shadow: 0px 8px 10px #bde6cf inset, 3px 3px 3px #000000;
     border: 1px inset transparent;
-    margin-top:20px;
 }
 /* Al poner el curso encima (hover) */
 .button1:hover {
@@ -70,41 +78,18 @@ form {
     cursor: pointer;
 }
 
-.separador {
+#separador {
     align-items: center;
     border-bottom: 1px solid #dadde1;
     display: flex;
     margin: 0 auto;
     text-align: center;
-    margin-top:10px;
+    margin-top:25px;
+    margin-bottom:20px;
     width: 85%;
 }
 
 .button2 {
-    /* Cualidades texto */
-    font-size: 1.2rem;
-    text-shadow: 0px 1px 0px #bdc5e6;
-    /* Color del texo */
-    color: #000000;
-    /* Eliminar color de fondo */
-    background: transparent;
-    /* Cualidades caja, Grosor del borde, estilo de línea y color */
-    box-sizing: content-box;
-    padding: 0.3em 1em 0.3em 1em !important;
-    border-radius: 0.5rem;
-    box-shadow: 0px 8px 10px #bdc5e6 inset, 3px 3px 3px #000000;
-    border: 1px inset transparent;
-    margin-top:20px;
-}
-/* Al poner el curso encima (hover) */
-.button2:hover {
-    background-color: #7395c9;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7898c9), color-stop(100%,#7395c9));
-    color: white;
-    cursor: pointer;
-}
-
-.button3 {
     /* Cualidades texto */
     font-size: 1.2rem;
     text-shadow: 0px 1px 0px #e6bdbd;
@@ -120,7 +105,6 @@ form {
     border-radius: 0.5rem;
     box-shadow: 0px 8px 10px #e6bdbd inset, 3px 3px 3px #000000;
     border: 1px inset transparent;
-    margin-top:10px;
 }
 /* Al poner el curso encima (hover) */
 .button3:hover {
@@ -130,11 +114,12 @@ form {
     cursor: pointer;
 }
 
-#pieform {
-  margin-top:20px;
-}
+/* ////////////////////// PIE DE PAGINA ////////////////////// */
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #364552 ;
     padding: 2rem;
     color: #fff;
