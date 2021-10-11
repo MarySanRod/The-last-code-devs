@@ -107,7 +107,7 @@ header {
     border: 1px inset transparent;
 }
 /* Al poner el curso encima (hover) */
-.button3:hover {
+.button2:hover {
     background-color: #c97373;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c97373), color-stop(100%,#c97373));
     color: white;
