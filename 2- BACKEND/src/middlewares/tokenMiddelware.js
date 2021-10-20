@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const JWT_KEY = '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'
 
 verifyToken = (req, res, next) =>{
     const {token} = req.headers;

@@ -9,7 +9,9 @@ export default class Login extends React.Component{
             .then(resp => {
                 console.log('Todo Bien, este es el token:', resp.data);
                 sessionStorage.setItem('token', JSON.stringify(resp.data));
-            })
+                window.location.href = './PaginaPrincipal';
+            }
+            )
             .catch(err => console.log('Hubo error', err))
     }
         render(){

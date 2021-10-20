@@ -3,7 +3,7 @@ const usersRoute = express.Router()
 const usersModel = require('../controllers/usersControllers')
 const tokenMiddleware = require('../middlewares/tokenMiddelware')
 
-usersRoute.use(tokenMiddleware.verifyToken);
+// usersRoute.use(tokenMiddleware.verifyToken);
 
 usersRoute.route('/')
 .get(usersModel.listUsers)
@@ -16,4 +16,5 @@ usersRoute.route('/:id')
 .delete(usersModel.deleteUsers);
 
 
+module.exports = usersRoute
 module.exports = usersRoute
