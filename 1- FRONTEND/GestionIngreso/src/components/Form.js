@@ -1,33 +1,30 @@
 import React from 'react';
+import Image from '../Assets/Imagenes/Usuario.jpg'
+import Login from "./Login";
 
 function Form() {
-    return (
-      <form action="" class="form_user" id="form_user">
-        <div id="margenform"></div>
-        
-        <div id="IngresoDatos">
+  return (    
+    <div className="MainBox">
+        <form>
           <div>
-            <h2 id="TituloUsuario">Usuario</h2>
-            <input type="email" id="Usuario" name="Usuario" placeholder="" />
-          </div>
-
-          <div>
-            <h2 id="TituloContraseña">Contraseña</h2>
-            <input type="password" id="Contraseña" name="Contraseña" placeholder="" />
-          </div>
-
-        </div>
-
-        <div id="IniciarSesión">
-          <button class="button1" type="button" onclick>
+            <img src={Image} className="UserPhoto" alt="UserPhoto" />
+            <h1 className="Iniciar">INICIAR SESIÓN</h1>
+            <input className="Name" type="text" placeholder="Ingrese su nombre" />
+            <input className="Password" type="password" placeholder="Ingrese su contraseña" />
+            
+            <button className="ButtomIS" type="button" onclick>
             Iniciar sesión
-          </button>
-        </div>
-       
-        <div id="margenform"></div>
-        
+            </button>
+            
+          </div>
+
         </form>
-    )
+
+        <Login/>
+
+    </div>
+  )
 }
 
-export default Form
+
+export default Form;

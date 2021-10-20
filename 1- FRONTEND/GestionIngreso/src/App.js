@@ -1,24 +1,15 @@
 import React from "react";
 import './App.css';
-import Header from "./components/Header";
+import Form from "./components/Form";
 import Footer from "./components/Footer";
-// import Form from "./components/Form";
-import Login from "./components/Login";
-import Logo from "./components/Logo";
 
 function App() {
     return(
-        <div className = 'Container'>
-            <Header/>
+        <div className="container">
             
-            <div className = 'Ingreso'>
-                <Logo/>
-                <Login/>
-            </div>
-            
-            {/* <Form/> */}
+            <Form/>
             <Footer/>
-            
+
         </div>
     );
 }

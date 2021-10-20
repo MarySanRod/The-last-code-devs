@@ -1,136 +1,114 @@
-/* ////////////////////// ENCABEZADO ////////////////////// */
+/* ////////////////////// BACKGROUND ////////////////////// */
 
-header {
-    background-color: #364552;
-    color: white;
-    padding: 3rem 3rem;
-}
-
-#titulo {
-    font-size: 3rem;
-    text-align: center;
-}
-
-/* ////////////////////// FORMULARIO ////////////////////// */
-
-.form_user {
-    margin: 0 auto;
-    border: 1px solid #666666;
-    border-radius: 10px;
-    width: 500px;
-    background-color: white;
-    align-content: center;
-    margin-top:80px;
-}
-
-#margenform {
-    margin-top:30px;
+body{
+    padding: 0;
+    background: url(./Assets/Imagenes/Background.jpg) no-repeat left top;
+    background-size: cover;
+    background-attachment: fixed;
   }
   
-#IngresoDatos, #IniciarSesión, #Google {
-    position: relative;
+  .container {
     width: 100%;
-    margin: 0 auto;
-    padding: 0.25rem 0;
-    margin-top: 10px;
+    height: 100%;
+    background-color: #36455277;
+    color: #FFFBFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    /* padding: 70px 30px; */
     
-    /* Alinear input dentro de un div */
-    text-align: center; 
-}
-
-#TituloUsuario, #TituloContraseña {
-    margin-bottom: 15px;
   }
-
-#Usuario, #Contraseña {
-    position: relative;
-    height: 3rem;
-    width: 15rem;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 0.5rem;
-    background-color: #efefef;
-    margin-bottom: 30px;
-}
-
-.button1 {
-    /* Cualidades texto */
-    font-size: 1.2rem;
-    text-shadow: 0px 1px 0px #bde6cf;
-    /* Color del texo */
-    color: #000000;
-    /* Eliminar color de fondo */
-    background: transparent;
-    /* Cualidades caja, Grosor del borde, estilo de línea y color */
-    box-sizing: content-box;
-    align-content: center;
-    width: 200px;
-    padding: 0.8em 2em 0.8em 2em !important;
-    border-radius: 0.5rem;
-    box-shadow: 0px 8px 10px #bde6cf inset, 3px 3px 3px #000000;
-    border: 1px inset transparent;
-}
-/* Al poner el curso encima (hover) */
-.button1:hover {
-    background-color: #73c998;;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#79cc9c), color-stop(100%,#73c998));
-    color: white;
-    cursor: pointer;
-}
-
-#separador {
-    align-items: center;
-    border-bottom: 1px solid #dadde1;
-    display: flex;
-    margin: 0 auto;
-    text-align: center;
-    margin-top:25px;
-    margin-bottom:20px;
-    width: 85%;
-}
 
 /* ////////////////////// BLOQUE DE INGRESO ////////////////////// */
 
-.Ingreso {
-    margin: 0 auto;
-    border: 1px solid #666666;
-    border-radius: 10px;
-    width: 500px;
-    background-color: white;
-    align-content: center;
+.MainBox {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000500;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 50px;
+    backdrop-filter: blur(1px) ;
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
     text-align: center;
-    margin-top: 70px;
-}
-
-#TituloLogo {
-    border: 1px solid#000000;
-    background-color: #494949;
-    margin-bottom: 15px;
-    font-size: 2rem;
-    text-shadow: 0px 1px 0px #706c6c;
-    color: #ffffff;
+    align-content: center;
+  }
+    
+/* ////////////////////// FORMULARIO ////////////////////// */
+    
+.UserPhoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;    
+    left: calc(50% - 50px);
+    }
+  
+.Iniciar {
+    margin: 0;
+    padding: 50px 0 10px;
+    text-align: center;
+    font-size: 19px;
+    margin-top: 50px;
+    margin-bottom: 5px;
   }
   
-.Logo {
-    margin: 0 auto; 
+.Name, .Password {
+    font-size: 19px;
+    border: none;
+    border-bottom: 1px solid #000500;
+    background: #FFFBFF;
+    outline: none;
+    height: 40px;
+    color: #000500;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+/* ////////////////////// BOTONES ////////////////////// */
+
+.ButtomIS {
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 0px #706c6c;
+    color: #FFFBFF;
+    background: #3da733dc;
+    border-radius: 20px;  
+    border-color: #3da733dc;
+    width: 100%;
+    height: 50px;  
     margin-top: 20px;
-    margin-bottom: 20px;
-}
+  }
+  .ButtomIS:hover {
+    cursor: pointer;
+    background: #3da73383;
+    color: #000500;
+  }
 
 .GoogleLogin {
     /* Cualidades texto */
-    font-size: 2rem;
+    font-size: 1rem!important;
     text-shadow: 0px 1px 0px #706c6c;
     /* Color del texo */
     color: #ff5b00!important;
     /* Eliminar color de fondo */
     background: transparent;
     /* Cualidades caja, Grosor del borde, estilo de línea y color */
+    border-radius: 20px!important;
     border-color: #ff5b00!important;
-    box-sizing: content-box;
-    align-content: center;
-    width: 200px;
-    padding: 0.8em 2em 0.8em 2em !important;
+    /* box-sizing: content-box; */
+    align-content: center!important;
+    text-align: center!important;
+    width: 100%;
+    height: 50px !important;
+    padding: 0.2em 2em 0.2em 2em !important;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 /* Al poner el curso encima (hover) */
@@ -146,8 +124,8 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #364552 ;
-    padding: 2rem;
+    background-color: #364552ea ;
+    padding: 1.2rem;
     color: #fff;
     text-align: center;
 }
