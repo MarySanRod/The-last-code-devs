@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const URL = 'mongodb://localhost:27017/TheLastCodeDevs';
+//const URL = 'mongodb://localhost:27017/TheLastCodeDevs';
+const URL = 'mongodb+srv://admin:admin123@thelastcodedevs.5dt7z.mongodb.net/TheLastCodeDevs?retryWrites=true&w=majority';
 
 mongoose.connect(URL, {
     useNewUrlParser: true,
