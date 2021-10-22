@@ -1,0 +1,27 @@
+@urlBase = http://localhost:5000
+
+GET {{urlBase}}/sales/ HTTP/1.1
+###
+
+GET http://localhost:5000/sales/ HTTP/1.1
+###
+
+POST http://localhost:5000/sales HTTP/1.1
+content-type: application/json
+
+{
+    
+}
+###
+
+DELETE {{urlBase}}/sales/
+
+###
+PUT http://localhost:5000/sales/
+content-type: application/json
+
+{
+    
+}
+
+

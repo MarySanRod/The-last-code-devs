@@ -1,46 +1,67 @@
-import React from 'react'
+import axios from 'axios'
+import React, {useState} from 'react'
+
+
 
 function Form() {
+
+    const [idCliente, setIdCliente] = useState('');
+    const [nomCliente, setNomCliente] = useState('');
+    const [idVendedor, setIdVendedor] = useState('');
+    const [nomVendedor, setNomVendedor] = useState('');
+    const [fechaCompra, setFechaCompra] = useState('');
+    const [fechaPago, setFechaPago] = useState('');
+    const [idProducto, setIdProducto] = useState('');
+    const [preProducto, setPreProducto] = useState('');
+    const [cantidad, setCantidad] = useState('');
+    const [idVenta, setIdVenta] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+
+    const registrarVenta = async(e)=>{
+        e.preventDefault()
+        const nuevaVenta = {idCliente, nomCliente, idVendedor, nomVendedor,
+        fechaCompra, fechaPago, idProducto, preProducto, cantidad, idVenta, descripcion }
+        const respuesta = await axios.post('http://localhost:5000/sales', nuevaVenta)
+        console.log(respuesta)
+    };
+
     return (
-        <form>
+        <form onSubmit = {registrarVenta}>
             <div id="cliente">
-                <label for="id cliente">ID cliente</label>
-                <input type="text" id="idcliente" name="id cliente" placeholder="ID cliente"/>
-                <label for="nombre del cliente">Nombre del cliente</label>
-                <input type= "text" id="nomcliente" name="nombre del cliente" 
-                placeholder="Nombre del cliente"/>
+                <label >ID cliente</label>
+                <input type="text" required placeholder="ID cliente" onChange={e=>setIdCliente(e.target.value)}/>
+                <label >Nombre del cliente</label>
+                <input type= "text"  require placeholder="Nombre del cliente" onChange={e=>setNomCliente(e.target.value)}/>
             </div>
             <div id ="vendedor">
-                <label for="id vendedor">ID Vendedor</label>
-                <input type="text" id="idvendedor" name="id vendedor" placeholder="ID vendedor"/>
-                <label for="nombre del vendedor">Nombre del vendedor</label>
-                <input type= "text" id="nomvendedor" name="nombre del vendedor" 
-                placeholder="Nombre del vendedor"/>
+                <label >ID Vendedor</label>
+                <input type="text" required placeholder="ID vendedor" onChange={e=>setIdVendedor(e.target.value)}/>
+                <label >Nombre del vendedor</label>
+                <input type= "text" required placeholder="Nombre del vendedor" onChange={e=>setNomVendedor(e.target.value)}/>
             </div>
             <div id= "fechas">
-                <label for="fecha inicial">Fecha inicial</label>
-                <input type="date" id="fechainicial" name="fecha inicial" placeholder="fecha inicial"/>
-                <label for="fecha de pago">Fecha de pago</label>
-                <input type= "date" id="fechapago" name="fecha de pago" 
-                placeholder="fecha de pago"/>   
+                <label >Fecha inicial</label>
+                <input type="date" required placeholder="fecha inicial" onChange={e=>setFechaCompra(e.target.value)}/>
+                <label >Fecha de pago</label>
+                <input type= "date" required placeholder="fecha de pago" onChange={e=>setFechaPago(e.target.value)}/>   
             </div>
             <div id="productos">
-                <label for="producto">ID Producto</label>
-                <input type="text" id="idproducto" name="id producto" placeholder="ID producto"/>
-                <label for="precio del producto">Precio del producto</label>
-                <input type= "number" id="preproducto" name="precio del producto" 
-                placeholder="precio del producto"/>
-                <label for="cantidad">Cantidad</label>
-                <input type= "number" id="cantidad" name="cantidad del producto" 
-                placeholder="cantidad del producto"/>
+                <label >ID Producto</label>
+                <input type="text" required placeholder="ID producto" onChange={e=>setIdProducto(e.target.value)}/>
+                <label >Precio del producto</label>
+                <input type= "number"  required placeholder="precio del producto" onChange={e=>setPreProducto(e.target.value)}/>
+                <label >Cantidad</label>
+                <input type= "number" required placeholder="cantidad del producto" onChange={e=>setCantidad(e.target.value)}/>
             </div>
             <div id="venta">
-                <label for="id venta">ID venta</label>
-                <input type="text" id="idventa" name="id ventas" placeholder="ID venta"/><br></br><br></br>
-                <label for="comentario">Descripción de la venta</label><br></br>
-                <textarea cols="50" rows="5" id="comentario"
-                    placeholder="ingrese descripción de la venta" name="Descripción">
+                <label >ID venta</label>
+                <input type="text" required placeholder="ID venta" onChange={e=>setIdVenta(e.target.value)}/><br></br><br></br>
+                <label >Descripción de la venta</label><br></br>
+                <textarea cols="50" rows="5" placeholder="ingrese descripción de la venta" onChange={e=>setDescripcion(e.target.value)}>
                 </textarea>
+            </div>
+            <div>
+                <button type='submit'>Registrar venta</button>
             </div>
         </form>
     )

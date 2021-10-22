@@ -10,14 +10,18 @@ app.use(express.json())
 const mongoose = require('./database/connection');
 const usersModel = require('./database/users');
 const productsModel = require('./database/products');
+const salesModel = require('./database/sales');
+
 const authRoute = require('./routes/authRoute');
 const usersRoute = require('./routes/usersRoute');
 const productsRoute = require('./routes/productsRoute');
+const salesRoute = require('./routes/salesRoute')
 
 /////////// Routes ///////////
 app.use('/auth',require('./routes/authRoute'));
 app.use('/users',require('./routes/usersRoute'));
 app.use('/products',require('./routes/productsRoute'));
+app.use('/sales', require('./routes/salesRoute'))
 
 
 
