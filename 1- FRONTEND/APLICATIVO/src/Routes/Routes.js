@@ -6,8 +6,9 @@ import RegistroVentas from '../components/RegistroVentas/RegistroVentas'
 
 const Routes = () => {
     return (
+
         <BrowserRouter>
-        
+
             <Switch>
                 <Route exact path='/' component={Inicio} />
                 <Route exact path='/PaginaPrincipal' component={PaginaPrincipal} />

@@ -12,8 +12,8 @@ function Inicio() {
                     <div>
                         <img src={UserPhoto} className="UserPhoto" alt="UserPhoto" />
                         <h1 className="Iniciar">INICIAR SESIÓN</h1>
-                        <input className="Name" type="text" placeholder="Ingrese su nombre" />
-                        <input className="Password" type="password" placeholder="Ingrese su contraseña" />
+                        <input className="NameGI" type="text" placeholder="Ingrese su nombre" />
+                        <input className="PasswordGI" type="password" placeholder="Ingrese su contraseña" />
                         
                         <button className="ButtomIS" type="button" onclick>
                         Iniciar sesión

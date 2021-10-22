@@ -1,11 +1,13 @@
 import React from "react";
 import '../../Styles/GestionUsuario.css';
+import PaginaPrincipal from '../GestionIngreso/PaginaPrincipal'
 
 function GestionUsuario() {
     return(
+
         <div className= "bodyGU">
             <header>
-                <h1 id="titulo">Gestión de Usuario</h1>
+                <PaginaPrincipal/>
             </header>
 
             <form action="" class="form_register" id="form_register">
@@ -26,7 +28,7 @@ function GestionUsuario() {
                         <label for="No Autorizado"><input id="No Autorizado" type="radio" name="Estado"/> No Autorizado</label><br/>
                     </div>
                 </div>
-                <button class="botonGI" type="button" onclick> Buscar Usuario </button>
+                <button class="botonGU" type="button" onclick> Buscar Usuario </button>
                 <table id="tabla1">
                     <thead>
                         <tr>

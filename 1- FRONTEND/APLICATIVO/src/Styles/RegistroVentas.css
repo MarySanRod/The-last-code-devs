@@ -1,18 +1,36 @@
-/* header {
-    background-color: #364552;
-    color: white;
-    padding: 1rem 1rem;
-}
-
-header h1 {
-    font-size: 3rem;
+#tituloRV{
+    margin: 0;
     text-align: center;
+    margin-top: 120px;
+    margin-bottom: 25px;
+    background-color: #efefef; 
 }
 
-form div{
+#containerRV{
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+#cliente, #vendedor, #fechas, #productos, #ventas{
     position: relative;
     left: 1rem;
-    width: 1320px;
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: white;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+
+#botonRV {
+    position: relative;
+    left: 40%;
+    width: 20%;
     margin: 0 auto;
     background-color: white;
     margin: 0.5rem 0;
@@ -20,20 +38,10 @@ form div{
     padding: 0.25rem 0;
 }
 
-form button {
+#RV{
     position: relative;
     left: 1rem;
-    width: 97%;
-    margin: 0 auto;
-    background-color: white;
-    margin: 0.5rem 0;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0;
-}
-
-label, input{
-    position: relative;
-    left: 1rem;
+    top: 30%;
 }
 
 textarea {
@@ -42,41 +50,29 @@ textarea {
     left: 0rem;
 }
 
-table {
-    width: 500px;
-    margin: 0 auto;
-}
-
-#footer{
-
+#footerRV{
     position: absolute;
     bottom: 0;
     width: 100%;
-
-}
-
-footer {
-    
     background-color: #222 ;
-    padding: 2rem;
     color: #fff;
 }
 
-footer section {
+#footerRV section {
     float: right;
 }
 
-footer p {
+#footerRV p {
     margin: 0;
 }
 
-footer a {
+#footerRV a {
     transition: color 0.3s ease;
     color: #fff;
     text-decoration: none;
 }
 
-footer a:hover {
+#footerRV a:hover {
     color: cornflowerblue;
 }
- */
+
