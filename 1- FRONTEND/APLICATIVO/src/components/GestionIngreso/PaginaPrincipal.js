@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/PaginaPrincipal.css';
+import '../../Styles/PaginaPrincipal.css';
 
 const Barra = () => {
     return (
@@ -10,7 +10,7 @@ const Barra = () => {
                 <div className="dropdown">
                     <button className="dropbtn"> Administrador de ventas </button>
                     <div className="dropdown-content">
-                        <a href="/PagVacia"> Registro </a>
+                        <a href="/RegistroVentas"> Registro </a>
                         <a href="/PagVacia"> Historial de ventas </a>
                     </div>
                 </div>

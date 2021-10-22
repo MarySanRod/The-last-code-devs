@@ -1,6 +1,6 @@
 import React from "react";
-import '../App.css';
-import UserPhoto from '../Assets/Imagenes/Usuario.jpg'
+import '../../Styles/GestionIngreso.css';
+import UserPhoto from '../../Assets/Imagenes/Usuario.jpg'
 import Login from "./Login";
 
 function Inicio() {

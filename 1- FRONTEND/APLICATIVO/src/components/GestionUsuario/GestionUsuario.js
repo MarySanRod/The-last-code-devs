@@ -1,5 +1,5 @@
 import React from "react";
-import '../Styles/GestionUsuario.css';
+import '../../Styles/GestionUsuario.css';
 
 function GestionUsuario() {
     return(
