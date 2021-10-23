@@ -23,10 +23,11 @@ function FormRV() {
         const nuevaVenta = {idCliente, nomCliente, idVendedor, nomVendedor,
         fechaCompra, fechaPago, idProducto, preProducto, cantidad, idVenta, descripcion }
         const respuesta = await axios.post('http://localhost:5000/sales', nuevaVenta)
+        console.log(respuesta)
         const mensaje = "Venta registrada correctamente"
         Swal.fire({
             icon: 'success',
-            title: 'Venta registrada correctamente'
+            title: mensaje
           })
     };
 
