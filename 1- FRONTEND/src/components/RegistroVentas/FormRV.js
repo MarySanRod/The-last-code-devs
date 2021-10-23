@@ -67,7 +67,7 @@ function FormRV() {
                 </textarea>
             </div>
             <div>
-                <button id= 'botonRV' type='submit'>Registrar venta</button>
+                <button id= 'botonRV' type='submit' onClick='reset'>Registrar venta</button>
             </div>
         </form>
     )

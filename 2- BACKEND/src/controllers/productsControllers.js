@@ -23,12 +23,8 @@ listProducts = (req, res) => {
   
   createProducts = (req, res) => {
     console.log(req.params, req.body, req.headers);
-    productsModel.create(
-      {
-        user: 'Sando',
-        password: 666666
-      }
-    ).then((data) => {
+    productsModel.create(req.body)
+    .then((data) => {
       res.json(data);
     }).catch(err => {
       res.send(err);

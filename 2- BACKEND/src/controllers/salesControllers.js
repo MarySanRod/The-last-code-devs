@@ -12,7 +12,8 @@ listSales = (req, res) => {
 
 createSales = (req, res) => {
     console.log(req.params, req.body, req.headers);
-    salesModel.create(req.body).then((data)=>{
+    salesModel.create(req.body)
+    .then((data)=>{
       res.json(data);
     }).catch(err=>{
       res.send(err);
