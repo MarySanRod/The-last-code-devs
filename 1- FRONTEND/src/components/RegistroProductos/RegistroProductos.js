@@ -9,12 +9,12 @@ function RegistroProductos() {
     const [idProducto, setIdProducto] = useState('');
     const [precio, setPrecio] = useState('');
     const [descripcion, setDescripcion] = useState('');
-    const [disponibilidad, setDisponibilidad] = useState('');
+    //const [disponibilidad, setDisponibilidad] = useState('');
 
 
     const registrarProducto = async(e)=>{
         e.preventDefault()
-        const nuevoProducto = {idProducto, precio, descripcion, disponibilidad }
+        const nuevoProducto = {idProducto, precio, descripcion}
         const respuesta = await axios.post('http://localhost:5000/products', nuevoProducto)
         console.log(respuesta)
         const mensaje = "Producto registrado correctamente"
@@ -46,8 +46,8 @@ function RegistroProductos() {
                 </div>
                 <div>
                     <label for="estado" class="label_e"><h3>Estado</h3></label>
-                    <label for="Disponible"><input id="Disponible" type="radio" name="Estado"/> Disponible</label>
-                    <label for="No Disponible"><input id="No Disponible" type="radio" name="Estado"/> No Disponible</label><br/>
+                    <label for="Disponible"><input id="Disponible" type="radio" name="Estado" /*onChange={e=>setDisponibilidad(e.target.value)}*//> Disponible</label>
+                    <label for="No Disponible"><input id="No Disponible" type="radio" name="Estado" /*onChange={e=>setDisponibilidad(e.target.value)}*//> No Disponible</label><br/>
                 </div>
                 </div>
             

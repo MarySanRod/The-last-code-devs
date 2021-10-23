@@ -10,11 +10,11 @@ productsRoute.route('/')
 .post(productsModel.createProducts);
 
 
-productsRoute.route('/:id')
-.get(productsModel.listProducts)
-.put(productsModel.modifyProducts)
-.delete(productsModel.deleteProducts);
+// productsRoute.route('/:id')
+// .get(productsModel.listProducts)
+// .put(productsModel.modifyProducts)
+// .delete(productsModel.deleteProducts);
 
 
 module.exports = productsRoute
-module.exports = productsRoute
+// module.exports = productsRoute
