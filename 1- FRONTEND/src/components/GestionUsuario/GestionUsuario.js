@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-// import '../../Styles/GestionUsuario.css';
+import './GestionUsuario.css';
 import PaginaPrincipal from '../GestionIngreso/PaginaPrincipal'
 import UserForm from "./UserForm";
 import UserList from "./UserList";
@@ -111,7 +111,9 @@ export default class GestionUsuario extends React.Component {
   
     render() {
       return (
-        <div className="container">
+        <div className="bodyGU">
+          <PaginaPrincipal/>
+          <h1 id="tituloGU">Gestion Usuarios</h1>
           <UserList
             users={this.state.users}
             onEditUser={this.onEditUser}

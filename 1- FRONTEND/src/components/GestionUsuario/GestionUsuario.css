@@ -1,0 +1,83 @@
+.bodyGU {
+    width: 100%;
+    height: 100%;
+    background-color: #efefef; 
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  #tituloGU {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: #efefef; 
+  }
+
+  .listaGU{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000500;
+    padding: 20px;
+    border: 1px solid #000500;
+    position: relative;
+    margin-top: 20px;
+    left: 10%;
+  }
+
+  .listaHeaderGU{
+    color: #000500;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    left: 5%;
+  }
+
+  .tdGU {
+    padding: 10px;
+  }
+
+  .tdBotonGU {
+    padding: 2px;
+  }
+
+  .formularioGU {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000500;
+    box-sizing: border-box;
+    padding: 20px;
+    backdrop-filter: blur(1px) ;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    margin-top: 20px;
+    left: 35%;
+  }
+
+  .divGU {
+    margin-top: 10px;
+  }
+
+  .inputGU {
+    padding: 5px;
+    width: 300px;
+  }
+
+  .selectGU {
+    padding: 5px;
+  }
+
+  .botonGU {
+    padding: 5px;
+    width: 60px;
+  }
+
+  .rowBotones {
+    position: relative;
+    left: 165%;
+    text-align: center;
+    align-content: center;
+  }
+

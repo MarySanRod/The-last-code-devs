@@ -5,28 +5,29 @@ class UserList extends React.Component {
     const users = this.props.users;
     const userRow = users.map((st, index) => {
       return <tr key={index}>
-          <td>{st._id}</td>
-          <td>{st.email}</td>
-          <td>{st.name}</td>
-          <td>{st.role}</td>
-          <td>{st.status}</td>
-          <td><button type="button" onClick={() => this.props.onEditUser(st)}>editar</button></td>
-          <td><button type="button" onClick={() => this.props.onDeleteUser(st._id)}>eliminar</button></td>
+          <td className="tdGU">{st._id}</td>
+          <td className="tdGU">{st.email}</td>
+          <td className="tdGU">{st.name}</td>
+          <td className="tdGU">{st.role}</td>
+          <td className="tdGU">{st.status}</td>
+          <td className="tdBotonGU"><button type="button" onClick={() => this.props.onEditUser(st)}>Editar</button></td>
+          <td className="tdBotonGU"><button type="button" onClick={() => this.props.onDeleteUser(st._id)}>Eliminar</button></td>
       </tr>
     });
     return (
-      <div className="lista">
+      <div className="listaGU">
         <table>
-          <thead>
+          <thead className="listaHeaderGU">
             <tr>
               <th>ID</th>
               <th>Email</th>
               <th>Nombre</th>
               <th>Rol</th>
               <th>Estado</th>
+
             </tr>
           </thead>
-          <tbody>
+          <tbody className="listaHeaderGU">
             {userRow}
           </tbody>
         </table>
