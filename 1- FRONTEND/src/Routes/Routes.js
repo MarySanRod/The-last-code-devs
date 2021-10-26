@@ -5,7 +5,7 @@ import PaginaPrincipal from '../components/GestionIngreso/PaginaPrincipal'
 import RegistroVentas from '../components/RegistroVentas/RegistroVentas'
 import MaestroVentas from "../components/MaestroVentas/MaestroVentas";
 import MaestroProductos from "../components/MaestroProductos/MaestroProductos";
-import RegistroProductos from "../components/RegistroProductos/RegistroProductos";
+import RegistroProductos from "../components/RegistroProductos/RegistroProductos"
 
 const Routes = () => {
     return (

@@ -43,7 +43,6 @@ export default class GestionUsuario extends React.Component {
     }
   
     onEditUser(User) {
-  
       console.log('quiero editar un estudiante', User);
       this.setState({ selectedUser: User });
   

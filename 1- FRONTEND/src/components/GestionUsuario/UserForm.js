@@ -35,14 +35,7 @@ class UserForm extends React.Component {
     if (hasError) {
       return;
     }
-    this.props.onSaveuser(evt);
-  }
-
-  onEmailChange = (evt) => {
-    const user = this.props.user;
-    const newUser = { ...user, email: parseInt(evt.target.value) };
-    console.log('cambió el email', evt.target.value, user, newUser);
-    this.props.onFormChange(newUser);
+    this.props.onSaveUser(evt);
   }
 
   render() {
@@ -53,34 +46,42 @@ class UserForm extends React.Component {
         <form onSubmit={this.validateForm}>
           <div>
             <label>Email</label>
-            <input type="number"
+            <input type="email"
               value={user.email}
-              onChange={this.onEmailChange} />
-            {this.state.errors.email && <div style={{ color: '#ff0000' }}>{this.state.errors.email}</div>}
+              onChange={(evt) => this.props.onFormChange({ ...user, email: evt.target.value })} disabled/>
+            {this.state.errors.email && <ValidationError messrole={this.state.errors.email} />}
           </div>
           <div>
             <label>Nombre</label>
             <input type="text"
               value={user.name}
-              onChange={(evt) => this.props.onFormChange({ ...user, name: evt.target.value })} />
+              onChange={(evt) => this.props.onFormChange({ ...user, name: evt.target.value })} disabled/>
             {this.state.errors.name && <ValidationError messrole={this.state.errors.name} />}
           </div>
           <div>
             <label>Rol</label>
-            <input type="number"
-              value={user.role}
-              onChange={(evt) => this.props.onFormChange({ ...user, role: parseInt(evt.target.value) })} />
-            {this.state.errors.role && <div>{this.state.errors.role}</div>}
+    
+            <select onChange={(evt) => this.props.onFormChange({ ...user, role: evt.target.value })} value={user.role}>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Ventas">Ventas</option>
+            </select>
+            
+            {this.state.errors.role && <ValidationError messrole={this.state.errors.role} />}
+
           </div>
           <div>
             <label>Estado</label>
-            <input type="number"
-              value={user.status}
-              onChange={(evt) => this.props.onFormChange({ ...user, status: parseInt(evt.target.value) })} />
-            {this.state.errors.status && <div>{this.state.errors.status}</div>}
+
+            <select onChange={(evt) => this.props.onFormChange({ ...user, status: evt.target.value })} value={user.status}>
+              <option value="Desactivado">Desactivado</option>
+              <option value="Activado">Activado</option>
+            </select>
+
+            {this.state.errors.status && <ValidationError messrole={this.state.errors.status} />}
           </div>
           <input type="submit" value={user._id === -1 ? 'Crear' : 'Editar'} />
-          <input type="button" value="Limpiar" onClick={this.props.onClearuser} />
+          <input type="button" value="Limpiar" onClick={this.props.onClearUser} />
         </form >
       </div >
     );
