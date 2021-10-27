@@ -9,6 +9,8 @@ usersRoute.route('/')
 .get(usersModel.listUsers)
 .post(usersModel.createUsers);
 
+usersRoute.route('/afterLogin')
+.get(usersModel.getRoleAfterLogin);
 
 usersRoute.route('/:id')
 .get(usersModel.listUsers)
@@ -16,5 +18,4 @@ usersRoute.route('/:id')
 .delete(usersModel.deleteUsers);
 
 
-module.exports = usersRoute
 module.exports = usersRoute

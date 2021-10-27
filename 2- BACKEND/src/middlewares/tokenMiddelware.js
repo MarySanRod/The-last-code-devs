@@ -10,9 +10,10 @@ verifyToken = (req, res, next) =>{
             res.status(401).send('No autorizado');
             return;
         }
-    console.log(decoded)
-    });
+    console.log(decoded);
+    req.userDecoded = decoded;
     next();
+    });
 }
 
 module.exports = {

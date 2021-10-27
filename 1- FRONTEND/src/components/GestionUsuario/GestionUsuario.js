@@ -115,22 +115,33 @@ export default class GestionUsuario extends React.Component {
     }
   
     render() {
-      return (
-        <div className="bodyGU">
-          <PaginaPrincipal/>
-          <h1 id="tituloGU">Gestion Usuarios</h1>
-          <UserList
-            users={this.state.users}
-            onEditUser={this.onEditUser}
-            onDeleteUser={this.onDeleteUser}
-          />
-          <UserForm
-            user={this.state.selectedUser}
-            onFormChange={this.onFormChange}
-            onClearUser={this.onClearUser}
-            onSaveUser={this.onSaveUser}
-          />
-        </div >
-      );
+
+      if (window.sessionStorage.getItem('token') !== null) {
+
+        return (
+          <div className="bodyGU">
+            <PaginaPrincipal/>
+            <h1 id="tituloGU">Gestion Usuarios</h1>
+            <UserList
+              users={this.state.users}
+              onEditUser={this.onEditUser}
+              onDeleteUser={this.onDeleteUser}
+            />
+            <UserForm
+              user={this.state.selectedUser}
+              onFormChange={this.onFormChange}
+              onClearUser={this.onClearUser}
+              onSaveUser={this.onSaveUser}
+            />
+          </div >
+        );
+
+      } else {
+        return(
+          <div>
+          Contenido no disponible
+          </div>
+        )
+      }
     }
-  }
+}

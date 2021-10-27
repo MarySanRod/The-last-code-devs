@@ -20,10 +20,22 @@ export default class Login extends React.Component{
                 console.log('Todo Bien, este es el token:', resp.data);
                 // sessionStorage.setItem('token', JSON.stringify(resp.data));
                 sessionStorage.setItem('token', resp.data);
-                window.location.href = './PaginaPrincipal';
-            }
-            )
-            .catch(err => console.log('Hubo error', err))
+                axios.get(`${this.BACKEND_URL}/users/afterLogin`, {
+                    headers: {
+                      'token': sessionStorage.getItem('token')
+                    }
+                  }).then(resp => {
+                    sessionStorage.setItem('role', resp.data.role);
+                    console.log(resp.data.role)
+                    if(resp.data.role === "Administrador"){
+                        window.location.href = './PaginaPrincipal';
+                    }else{
+                        window.location.href = './Lobito1';
+                    }
+                  })
+
+                // window.location.href = './PaginaPrincipal';
+            }).catch(err => console.log('Hubo error', err))
     }
         render(){
         return(

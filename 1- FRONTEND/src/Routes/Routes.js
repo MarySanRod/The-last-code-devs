@@ -6,6 +6,7 @@ import RegistroVentas from '../components/RegistroVentas/RegistroVentas'
 import MaestroVentas from "../components/MaestroVentas/MaestroVentas";
 import MaestroProductos from "../components/MaestroProductos/MaestroProductos";
 import RegistroProductos from "../components/RegistroProductos/RegistroProductos"
+import Pending from "../components/GestionIngreso/Pending";
 
 const Routes = () => {
     return (
@@ -15,6 +16,7 @@ const Routes = () => {
             <Switch>
                 <Route exact path='/' component={Inicio} />
                 <Route exact path='/PaginaPrincipal' component={PaginaPrincipal} />
+                <Route exact path='/Lobito1' component= {Pending} />
                 <Route exact path='/GestionUsuario' component= {GestionUsuario} />
                 <Route exact path='/RegistroVentas' component= {RegistroVentas} />
                 <Route exact path='/MaestroVentas' component= {MaestroVentas} />

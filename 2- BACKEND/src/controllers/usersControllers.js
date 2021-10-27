@@ -1,5 +1,10 @@
 const usersModel = require('../database/users');
 
+getRoleAfterLogin = (req, res) => {
+  const userDecoded = req.userDecoded;
+  res.status(200).json({ role: userDecoded.user.role });
+}
+
 listUsers = (req, res) => {
   console.log(req.params);
   usersModel.find().then((data) => {
@@ -55,5 +60,6 @@ module.exports = {
   getUsers,
   createUsers,
   modifyUsers,
-  deleteUsers
+  deleteUsers,
+  getRoleAfterLogin
 }
