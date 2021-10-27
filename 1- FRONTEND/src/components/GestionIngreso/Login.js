@@ -3,9 +3,19 @@ import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 
 export default class Login extends React.Component{
+    
+    constructor(props) {
+        super(props);
+        if (process.env.NODE_ENV !== 'production') {
+                console.log('No estamos para producción');
+                require('dotenv').config();
+              }
+        this.BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      }
+    
     responseGoogle = (googleResp)=>{
         console.log(googleResp);
-        axios.post('http://localhost:5000/auth/google', {token: googleResp.tokenId})
+        axios.post(`${this.BACKEND_URL}/auth/google`, {token: googleResp.tokenId})
             .then(resp => {
                 console.log('Todo Bien, este es el token:', resp.data);
                 sessionStorage.setItem('token', JSON.stringify(resp.data));

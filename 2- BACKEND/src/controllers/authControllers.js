@@ -2,8 +2,8 @@
 const {OAuth2Client} = require('google-auth-library');
 const jwt = require('jsonwebtoken');
 const { findOneAndUpdate } = require('../database/users');
-const CLIENT_ID = '430836011138-lt77ca65jq3jvt7im3jq0d9jl1o960oh.apps.googleusercontent.com'
-const JWT_KEY = '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'
+const CLIENT_ID = process.env.CLIENT_ID;
+const JWT_KEY = process.env.JWT_KEY;
 const usersModel = require('../database/users')
 
 googleAuth = (req, res) => {

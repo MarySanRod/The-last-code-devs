@@ -6,6 +6,12 @@ import Swal from 'sweetalert2'
 
 function FormRV() {
 
+    if (process.env.NODE_ENV !== 'production') {
+        console.log('No estamos para producción');
+        require('dotenv').config();
+      }
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
     const [idCliente, setIdCliente] = useState('');
     const [nomCliente, setNomCliente] = useState('');
     const [idVendedor, setIdVendedor] = useState('');
@@ -17,12 +23,12 @@ function FormRV() {
     const [cantidad, setCantidad] = useState('');
     const [idVenta, setIdVenta] = useState('');
     const [descripcion, setDescripcion] = useState('');
-
+    
     const registrarVenta = async(e)=>{
         e.preventDefault()
         const nuevaVenta = {idCliente, nomCliente, idVendedor, nomVendedor,
         fechaCompra, fechaPago, idProducto, preProducto, cantidad, idVenta, descripcion }
-        const respuesta = await axios.post('http://localhost:5000/sales', nuevaVenta)
+        const respuesta = await axios.post(`${BACKEND_URL}/sales`, nuevaVenta)
         console.log(respuesta)
         const mensaje = "Venta registrada correctamente"
         Swal.fire({

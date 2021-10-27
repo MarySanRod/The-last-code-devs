@@ -8,7 +8,12 @@ import UserList from "./UserList";
 export default class GestionUsuario extends React.Component {
     constructor(props) {
       super(props);
-      this.USER_URL = 'http://localhost:5000/users';
+        if (process.env.NODE_ENV !== 'production') {
+                console.log('No estamos para producción');
+                require('dotenv').config();
+              }
+      this.BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      this.USER_URL = `${this.BACKEND_URL}/users`;
       this.emptyUser = { _id: -1, email: '', name: '', role: '', status: '' };
       this.state = {
         users: [],

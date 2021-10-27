@@ -6,6 +6,12 @@ import Swal from 'sweetalert2'
 
 function RegistroProductos() {
 
+    if (process.env.NODE_ENV !== 'production') {
+        console.log('No estamos para producción');
+        require('dotenv').config();
+      }
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
     const [idProducto, setIdProducto] = useState('');
     const [precio, setPrecio] = useState('');
     const [descripcion, setDescripcion] = useState('');
@@ -15,7 +21,7 @@ function RegistroProductos() {
     const registrarProducto = async(e)=>{
         e.preventDefault()
         const nuevoProducto = {idProducto, precio, descripcion}
-        const respuesta = await axios.post('http://localhost:5000/products', nuevoProducto)
+        const respuesta = await axios.post(`${BACKEND_URL}/products`, nuevoProducto)
         console.log(respuesta)
         const mensaje = "Producto registrado correctamente"
         Swal.fire({

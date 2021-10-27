@@ -23,12 +23,7 @@ getUsers = (req, res) => {
 
 createUsers = (req, res) => {
   console.log(req.params, req.body, req.headers);
-  usersModel.create(
-    {
-      user: 'Sando',
-      password: 666666
-    }
-  ).then((data) => {
+  usersModel.create().then((data) => {
     res.json(data);
   }).catch(err => {
     res.send(err);
