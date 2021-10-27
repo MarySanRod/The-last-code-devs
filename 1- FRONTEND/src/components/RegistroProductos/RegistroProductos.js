@@ -21,7 +21,11 @@ function RegistroProductos() {
     const registrarProducto = async(e)=>{
         e.preventDefault()
         const nuevoProducto = {idProducto, precio, descripcion}
-        const respuesta = await axios.post(`${BACKEND_URL}/products`, nuevoProducto)
+        const respuesta = await axios.post(`${BACKEND_URL}/products`, nuevoProducto, {
+            headers: {
+            'token': sessionStorage.getItem('token')
+            }
+      })
         console.log(respuesta)
         const mensaje = "Producto registrado correctamente"
         Swal.fire({

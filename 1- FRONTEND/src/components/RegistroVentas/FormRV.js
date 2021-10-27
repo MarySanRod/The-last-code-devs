@@ -28,7 +28,11 @@ function FormRV() {
         e.preventDefault()
         const nuevaVenta = {idCliente, nomCliente, idVendedor, nomVendedor,
         fechaCompra, fechaPago, idProducto, preProducto, cantidad, idVenta, descripcion }
-        const respuesta = await axios.post(`${BACKEND_URL}/sales`, nuevaVenta)
+        const respuesta = await axios.post(`${BACKEND_URL}/sales`, nuevaVenta, {
+            headers: {
+            'token': sessionStorage.getItem('token')
+            }
+      })
         console.log(respuesta)
         const mensaje = "Venta registrada correctamente"
         Swal.fire({

@@ -18,7 +18,8 @@ export default class Login extends React.Component{
         axios.post(`${this.BACKEND_URL}/auth/google`, {token: googleResp.tokenId})
             .then(resp => {
                 console.log('Todo Bien, este es el token:', resp.data);
-                sessionStorage.setItem('token', JSON.stringify(resp.data));
+                // sessionStorage.setItem('token', JSON.stringify(resp.data));
+                sessionStorage.setItem('token', resp.data);
                 window.location.href = './PaginaPrincipal';
             }
             )

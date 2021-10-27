@@ -3,7 +3,7 @@ const productsRoute = express.Router()
 const productsModel = require('../controllers/productsControllers')
 const tokenMiddleware = require('../middlewares/tokenMiddelware')
 
-// productsRoute.use(tokenMiddleware.verifyToken);
+productsRoute.use(tokenMiddleware.verifyToken);
 
 productsRoute.route('/')
 .get(productsModel.listProducts)
